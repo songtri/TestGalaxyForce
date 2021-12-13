@@ -12,8 +12,8 @@
      <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
      <meta http-equiv="pragma" content="no-cache" />
 
-    <link rel="stylesheet" type="text/css" href="game.css?v=1639365523">
-    <script type="text/javascript" src="game.js?v=1639365523"></script>
+    <link rel="stylesheet" type="text/css" href="game.css?v=1639368125">
+    <script type="text/javascript" src="game.js?v=1639368125"></script>
 
     <script type="text/javascript">
         function _startGame(){
@@ -39,16 +39,27 @@
     <!--body-->
         <div id="ajaxbar">
             <div id="game"><canvas id="canvas"></canvas></div>
-            <video id="video-container" onended="videoend()">
-                <source id="video_src" src="branding/branding.mp4" type="video/mp4" >
-            </video>
+            <div id="div-video">
+                <video id="video-container" onended="videoend()" width="1024" height="2400">
+                    <source id="video_src" src="branding/branding.mp4" type="video/mp4" >
+                </video>
+            </div>
             <div id="orientate"><img src="media/graphics/orientate/landscape.jpg" /></div>
             <div id="play" class="play" onclick=""></div>
             <!--<img id="scrollDown" width="220" height="277"></img>-->
         </div>
         <!-- <div id="tempdiv"><br><br><br></div> -->
     <!-- APICode2 -->
-    
+     <script type="text/javascript">
+        var vid = document.getElementById("video-container"); 
+        vid.oncanplay = videoloaded; 
+        var vidReady=false;
+
+        function videoloaded(){
+            console.log("video onloaded");
+            vidReady=true;
+        }
+    </script>
     
     <!-- END OF TEST -->
     
