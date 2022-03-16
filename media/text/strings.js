@@ -57,6 +57,8 @@ var _STRINGS = {
 
 	"Etc": {
 		"loading": ["Loading", "Chargement"],
-		"reset": ["Reset", "Réinitialiser"]
+		"reset": ["Reset", "Réinitialiser"],
+		"waitToContinue": ["Waiting to continue..", "En attente.."],
+		"continueStart": ["Go!", "Partez!"]
 	}
 };
